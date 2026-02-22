@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tamil Nadu District Rainfall (2005–2024)</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Tamil Nadu District Rainfall Dashboard (2005–2024)</h1>
+    <p>Interactive GIS starter app for district-wise annual rainfall visualization.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label for="yearRange">Year: <span id="yearValue">2015</span></label>
+      <input id="yearRange" type="range" min="2005" max="2024" value="2015" step="1" />
+
+      <label for="districtSelect">District trend</label>
+      <select id="districtSelect"></select>
+    </section>
+
+    <section class="layout">
+      <div id="map"></div>
+      <div class="chart-panel">
+        <h2 id="chartTitle">District Rainfall Trend</h2>
+        <canvas id="trendChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>
+      Note: Rainfall values in this starter are synthetic placeholders for demo/development.
+      Replace <code>data/rainfall_tn_2005_2024.json</code> with observed data (e.g., IMD).
+    </small>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
